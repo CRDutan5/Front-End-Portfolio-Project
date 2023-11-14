@@ -1,6 +1,6 @@
 
 
-The API I will be using is the rickandmortyapi.com
+The API I will be using is the [Rick and Morty Api](rickandmortyapi.com)
 
 ## User Stories
 As a user, I want to be able to view how the characters look like so that I can familiarize myself with them.
