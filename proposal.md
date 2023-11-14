@@ -1,15 +1,9 @@
-
-
-The API I will be using is the [Rick and Morty Api](rickandmortyapi.com)
+The API I will be using is the [Rick and Morty Api](https://rickandmortyapi.com/)
 
 ## User Stories
 As a user, I want to be able to view how the characters look like so that I can familiarize myself with them.
 
 As a user, I want to be able to filter characters based on the season they first appeared on, so I can form a timeline in my head of when the characters may have possibly crossed.
-
-
-
-
 
 
 
