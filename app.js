@@ -15,6 +15,8 @@ function displayCharacterCard(character) {
   section.append(newCard);
 }
 
+
+
 fetch("https://rickandmortyapi.com/api/character")
 .then((response) => response.json())
 .then((data) => {
