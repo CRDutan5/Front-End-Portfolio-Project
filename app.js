@@ -15,6 +15,48 @@ function displayCharacterCard(character) {
   section.append(newCard);
 }
 
+// create a function that filters the characters from "dead", "alive" and "unknown"
+// function characterStatusFilter(status, character){
+//   if(status === "alive"){
+//     console.log("i returned alive")
+
+//   }
+//   else if(status === 'dead'){
+//     console.log('i returned dead');
+//   }
+//   else if(status === 'unknown'){
+//     console.log('i returned unknown')
+//   }
+// }
+
+// // then pass it into the form event listener
+
+
+const form = document.querySelector("form")
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const selectedOption = document.querySelector('input[name="option"]:checked');
+
+  characterStatusFilter(selectedOption.id);
+})
+
+
+//run event listener outside of function then pass it in
+
+//maybe event.target.option.value
+
+function getCharacterByStatus(status) {
+  fetch(`https://rickandmortyapi.com/api/character/?status=${status}`)
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+}
+
+// clear out cards by using inner.html = "empty string"
+
+getCharacterByStatus('alive');
+
+
 
 
 fetch("https://rickandmortyapi.com/api/character")
@@ -23,3 +65,4 @@ fetch("https://rickandmortyapi.com/api/character")
   data.results.forEach((character) => displayCharacterCard(character));
 })
 .catch((error) => console.error("Error fetching data:", error));
+
