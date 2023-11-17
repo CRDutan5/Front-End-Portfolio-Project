@@ -45,7 +45,7 @@ form {
 
 button {
     color: black;
-    border: 5px solid black;
+    border: 4px solid black;
     padding: 5px;
 }
 
@@ -58,8 +58,8 @@ button {
 
 .intro{
     grid-row: 1/2;
-    grid-column: 1/2;
-    font-size: 30px;
+    grid-column: 3/4;
+    font-size: 25px;
     color: white;
     padding-bottom: 120px;
 }
@@ -111,4 +111,63 @@ button {
 .created-card h2 {
     padding-bottom: 25px;
     font-size: 30px;
+}
+
+@media (max-width: 1029px){
+    .character-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .quote {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-website {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 682px){
+    .character-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    nav {
+        text-align: center;
+    }
+    header {
+    background: url(./images/rm-mobile.jpeg);
+    background-size: cover; 
+    background-position: center; 
+    height: 200px;
+    }
+    .quote{
+        display: none;
+    }
+    .intro-website {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 50px;
+    }
+    .intro{
+        font-size: 18px;
+        text-align: center;
+    }
+    .view-characters-section h1 {
+        font-size: 50px;
+    }
+    form legend, label {
+        font-size: 18px;
+    }
+    button {
+        font-size: 18px;
+        padding: 5px;
+        border: 2px solid black;
+    }
 }
