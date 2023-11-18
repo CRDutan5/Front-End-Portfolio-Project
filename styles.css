@@ -50,6 +50,11 @@ button {
     padding: 5px;
 }
 
+fieldset {
+    padding: 10px;
+    
+}
+
 .intro-website {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

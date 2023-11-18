@@ -8,3 +8,15 @@ form.addEventListener("submit", (event) => {
     .then((response) => response.json())
     .then((data) => data.results.forEach((character) => displayCharacterCard(character)));
 })
+
+const speciesForm = document.querySelector(".species-selection");
+
+speciesForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const selectedSpecies = document.querySelector('input[name="option"]:checked');
+    console.log(selectedSpecies.id);
+    section.innerHTML = "";
+    fetch(`https://rickandmortyapi.com/api/character/?species=${selectedSpecies.id}`)
+    .then((response) => response.json())
+    .then((data) => data.results.forEach((character) => displayCharacterCard(character)));
+})

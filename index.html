@@ -28,17 +28,31 @@
             <h1>View the Characters</h1>
             <!-- If you can add fieldset to add more different categories -->
             <form>
-                <legend>Select the status of the characters you would like to see: </legend>
-                <label for="alive">Alive</label>
-                <input id ="alive" name="option" type="radio">
-                <label for="dead">Dead</label>
-                <input id ="dead" name="option" type="radio">
-                <label for="unknown">Unknown</label>
-                <input id="unknown" name="option" type="radio">
-                <br>
-                <br>
-                <button type="submit">Submit</button>
+                <fieldset>
+                    <legend>Select the Status:</legend>
+                    <label for="alive">Alive</label>
+                    <input id ="alive" name="option" type="radio" required>
+                    <label for="dead">Dead</label>
+                    <input id ="dead" name="option" type="radio" required>
+                    <label for="unknown">Unknown</label>
+                    <input id="unknown" name="option" type="radio" required>
+                    <!-- <br>
+                    <br> -->
+                    <button type="submit">Submit Status</button>
+                </fieldset>
             </form>
+                <form class="species-selection">
+                    <fieldset>
+                        <legend>Select the Species</legend>
+                        <label for="human">Human</label>
+                        <input id="human" name="option" type="radio">
+                        <label for="alien">Alien</label>
+                        <input id="alien" name="option" type="radio">
+                        <label for="humanoid">Humanoid</label>
+                        <input id="humanoid" name="option" type="radio">
+                        <button type="submit">Submit Species</button>
+                    </fieldset>
+                </form>
         </section>
         <section class="character-cards">
         </section>
